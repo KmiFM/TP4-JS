@@ -21,8 +21,8 @@ class Rectangulo {
     
     let obj = new Rectangulo();
 
-    obj.cambiarAlto = 10;
-    obj.cambiarAncho = 20;
+    obj.cambiarAlto = prompt ('ingrese el alto');
+    obj.cambiarAncho = prompt('ingrese el ancho');
     obj.area;
     
     console.log(obj.area)
