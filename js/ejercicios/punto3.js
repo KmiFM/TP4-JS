@@ -25,3 +25,4 @@ class Rectangulo {
     obj.cambiarAncho = 20;
     obj.area;
     
+    console.log(obj.area)
