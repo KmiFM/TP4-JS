@@ -7,3 +7,66 @@
 // esMayorDeEdad: indica si es mayor de edad, devuelve un mensaje indicando que la persona es mayor de edad.
 // mostrarDatos: devuelve toda la información del objeto.
 // generaDNI(): genera un número aleatorio de 8 cifras.
+
+//1ero creo la clase persona y su metodo
+class Persona {
+  constructor(nombre, edad, DNI, sexo, peso, altura, anoDeNacimiento) {
+    this.nombre = nombre;
+    this.edad = edad;
+    this.DNI = DNI;
+    this.sexo = sexo;
+    this.peso = peso;
+    this.altura = altura;
+    this.anoDeNacimiento = anoDeNacimiento;
+  }
+  mostrarDatos() {
+    document.write(`<ul>
+        <li>Nombre: ${this.nombre}</li>
+        <li>Edad: ${this.edad}</li>
+        <li>DNI: ${this.DNI}</li>
+        <li>sexo: ${this.sexo}</li>
+        <li>Peso: ${this.peso}</li>
+        <li>Altura: ${this.altura}</li>
+        <li>Año de Nacimiento: ${this.anoDeNacimiento}</li>
+        </ul>`);
+  }
+  //pido al usuario los datos
+}
+let nombres = prompt("Ingrese un Nombre");
+let edades = prompt("Ingrese Edad");
+let DNIs = prompt("Ingrese DNI");
+let sexos = prompt("Ingrese Sexo (H hombre, M mujer) ");
+let pesos = prompt("Ingrese Peso en kg ");
+let alturas = prompt("Ingrese Altura en CM ");
+let anosDeNacimiento = prompt("Ingrese Año de Nacimiento Ej:1980 ");
+//crear objeto persona
+let nuevaPersona = new Persona(
+  nombres,
+  edades,
+  DNIs,
+  sexos,
+  pesos,
+  alturas,
+  anosDeNacimiento
+);
+//mostrar los datos en pantalla
+nuevaPersona.mostrarDatos();
+if (anosDeNacimiento >= 1994 && anosDeNacimiento <= 2010) {
+  document.write("Gerenaracion Z");
+} else if (anosDeNacimiento >= 1981 && anosDeNacimiento <= 1993) {
+  document.write("Gerenaracion Y");
+} else if (anosDeNacimiento >= 1969 && anosDeNacimiento <= 1980) {
+  document.write("Gerenaracion X");
+} else if (anosDeNacimiento >= 1949 && anosDeNacimiento <= 1968) {
+  document.write("Baby Boom");
+} else if (anosDeNacimiento >= 1930 && anosDeNacimiento <= 1948) {
+  document.write("Silent ageneration");
+}
+
+if (edades >= 18) {
+  document.write("<br>Mayor de edad");
+} else {
+  document.write("<br>Menor de edad");
+}
+
+document.write("<br> DNI numero generado:" + Math.random() * 10000000);
