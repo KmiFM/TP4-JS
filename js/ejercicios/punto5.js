@@ -69,4 +69,4 @@ if (edades >= 18) {
   document.write("<br>Menor de edad");
 }
 
-document.write("<br> DNI numero generado:" + Math.random() * 10000000);
+document.write("<br> DNI numero generado:" + parseInt(Math.random() * 100000000));
